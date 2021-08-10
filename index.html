@@ -1,0 +1,67 @@
+<html>
+<head>
+<title>My Family Book</title>
+</head>
+<body>
+    <h1>My Family Book</h1>
+    <img src="https://i.postimg.cc/MKdhy06Z/family.jpg" id="familymemberimg">
+    <h4 id="familymembername"> My Family</h4>
+    <button id="next" onclick="update()">Next</button>
+</body>
+<style>
+    body{
+      background-color: snow;  
+    }
+    #familymemberimg{
+        border: solid papayawhip;
+        width: 30%;
+    }
+    #next{
+        background-color: powderblue;
+        width: 50px auto;
+    }
+    #next:hover{
+        background-color: salmon;
+    }
+    h1{
+        font-family: helvetica;
+    }
+    h4{
+        border-color: deepskyblue;
+    }
+</style>
+<script>
+        var images = ["https://i.postimg.cc/MKdhy06Z/family.jpg",
+        "https://i.postimg.cc//5ymDKL83/bro.jpg",
+        "https://i.postimg.cc/L6HcYQM0/grand-father.png",
+        "grand-mother.jpg",
+        "https://i.postimg.cc/wjMnFtMX/father.jpg",
+        "https://i.postimg.cc/bw5W5zSK/mother.jpg",
+        "https://i.postimg.cc/JnL6wtrd/sister.jpg",
+        "dog.jpeg"];
+
+        var names= ["My Family Book",
+        "Yesh Siva (me) and Arya Siva (my younger Brother)",
+        "Lalchand Solanki and Elango Rathinam (my grandfathers)",
+        "Padva Rathinam and Kamla Solanki (my grandmothers)",
+        "Siva Elango (my dad)",
+        "Tina Solanki (my mom)",
+        "Priya (my cousin)",
+        "Meethi (my dog)"];
+
+        var i = 0;
+        function update()
+        {
+            i++;
+            var numbers_of_family_member_in_array = 7;
+            if(i > numbers_of_family_member_in_array )
+            {
+                i = 0;
+            }
+            var updatedimage = images[i];
+            var updatedname = names[i];
+            document.getElementById("familymemberimg").src = updatedimage;
+            document.getElementById("familymembername").innerHTML = updatedname;
+        }
+</script>
+</html>
